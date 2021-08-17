@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!--Font: Space Mono (400 regular / 700 bold)-->
+  <!--font-family: 'Space Mono', monospace;-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <header>
+      <div class="logo-container">
+        <img src="./images/logo.svg" alt="Splitter Logo" title="Splitter Logo" class="logo-container__logo" style="width: 100%;">
+      </div>
+    </header>
+
+    <main>
+      <div class="calc-container">
+
+        <!--Flexbox Item Esquerda/Cima-->
+        <div class="calc-container-item form-area">
+          <form action="/" id="form" autocomplete="off" novalidate>
+
+            <div class="form-area-item">
+              <label for="billValue">Bill</label> <br>
+              <input type="number" 
+              name="billValue" 
+              min="0" 
+              step="0.01" 
+              dir="rtl" 
+              id="billValue"
+              user-input-area
+              aria-label="Bill Value" 
+              placeholder="0">
+            </div>
+
+            <fieldset class="form-area-item btn-input-grid">
+              <p class="label-grid">Select Tip %</p>
+
+              <label for="tip" class="hidden btn-active" style="display: none;"></label>
+              
+              <label for="btnFive">5%</label>
+              <input type="radio" name="tip" value="05" id="btnFive" aria-label="Five Percent Tip"></input>
+
+              <label for="btnTen">10%</label>
+              <input type="radio" name="tip" value="10" id="btnTen" aria-label="Ten Percent Tip"></input>
+
+              <label for="btnFifteen">15%</label>
+              <input type="radio" name="tip" value="15" id="btnFifteen" aria-label="Fifteen Percent Tip"></input>
+
+              <label for="btnTwentyFive">25%</label>
+              <input type="radio" name="tip" value="25" id="btnTwentyFive" aria-label="Twenty-five Percent Tip"></input>
+
+              <label for="btnFifty">50%</label>
+              <input type="radio" name="tip" value="50" id="btnFifty" aria-label="Fifty Percent Tip"></input>
+
+
+              <input type="number" 
+              name="tip" 
+              min="0" step="1" 
+              dir="rtl" 
+              id="customTipPercentage"
+              user-input-area
+              class="custom-percentage" 
+              placeholder="Custom"
+              aria-label="Custom Percentage Tip">
+            </fieldset>
+
+            <div class="form-area-item num-people-area">
+              <label for="totalPeople">Number of people</label>
+              <small class="warning-message" id="teste" style="opacity: 0;">Can't be zero</small>
+              <input type="number" 
+              name="totalPeople" 
+              min="0" 
+              step="1" 
+              dir="rtl" 
+              id="totalPeople" 
+              class="error"
+              user-input-area
+              placeholder="0">
+            </div>
+          </form>
+        </div>
+
+        <!--Flexbox item 2 Direita/Baixo -->
+        <div class="calc-container-item results-area">
+
+          <div class="results-area-item total-tip-person">
+            <div class="result-text">
+              <h3>Tip Amount</h3>
+              <small>/person</small>
+            </div>
+            <h2 class="total total-tip">$00,00</h2>
+          </div>
+
+          <div class="results-area-item total-bill-person">
+            <div class="result-text">
+              <h3>Total</h3>
+              <small>/person</small>
+            </div>
+            <h2 class="total total-bill">$00,00</h2>
+          </div>
+
+          <div class="results-area-item reset-btn" style="cursor: pointer;">
+            <div class="reset-btn-item" role="button" style="cursor: pointer;">reset</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/flp-pcll" target="_blank">flp-pcll</a>.
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- <script src="styleEvents.js"></script> -->
+</body>
+</html>

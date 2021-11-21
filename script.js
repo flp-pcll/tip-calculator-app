@@ -33,7 +33,7 @@ btnLabels.forEach(option => {
 
 resetBtn.addEventListener('click', reset);
 
-form.addEventListener('input', prepareData);
+form.addEventListener('change', prepareData);
 
 customTipInput.addEventListener('change', (e) => {
     isCustom = true;
